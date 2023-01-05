@@ -8,13 +8,12 @@ module.exports = function toReadable (number) {
 		 'eighteen', 'nineteen'
 		],
 		[
-			'twenty', 'thirty', 'forty', 'fifty', 'sixty',
+		  'twenty', 'thirty', 'forty', 'fifty', 'sixty',
 		  'seventy', 'eighty', 'ninety'
 		],
 	]
 
     number = number.toString()
-
 
     if (number.length === 1 || number.length === 2) {
         if (number < 20) {
@@ -25,7 +24,6 @@ module.exports = function toReadable (number) {
             return `${arr[1][number[0] - 2]} ${arr[0][number[1]]}`
         } 
     }
-
 
     if (number.length === 3) {
         if (!(+number[1] + +number[2])) {
